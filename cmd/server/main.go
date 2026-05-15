@@ -4,9 +4,11 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"time"
 
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
+	"github.com/go-chi/httprate"
 	"github.com/joho/godotenv"
 	"github.com/luigolima/go-temperature-by-cep-challenge/internal/infra/web"
 	"github.com/luigolima/go-temperature-by-cep-challenge/internal/usecase"
