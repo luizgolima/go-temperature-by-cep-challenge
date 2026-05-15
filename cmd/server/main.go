@@ -23,6 +23,7 @@ func main() {
 	r := chi.NewRouter()
 	r.Use(middleware.Logger)
 	r.Use(middleware.Recoverer)
+	r.Use(httprate.LimitByIP(10, 1*time.Minute))
 
 	weatherUseCase := usecase.NewWeatherUseCase()
 	weatherHandler := web.NewWeatherHandler(weatherUseCase)
