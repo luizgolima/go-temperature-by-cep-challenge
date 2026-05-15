@@ -21,7 +21,7 @@ The system is designed following clean principles to ensure clear separation of 
 
 ## 🚀 Cloud Run URL
 The application is deployed and accessible at:
-**[IN_PROGRESS]**
+**https://go-temperature-by-cep-challenge-790564571764.us-central1.run.app**
 
 ---
 
