@@ -78,6 +78,11 @@ go run cmd/server/main.go
 go test ./...
 ```
 
+## 🛡️ Rate Limiting
+To ensure service availability and stay within the Free Tier limits, the API implements a rate limit:
+- **Limit**: 10 requests per minute per IP.
+- **Exceeded Limit**: Returns HTTP `429 Too Many Requests`.
+
 ---
 
 ## 📊 API Usage
