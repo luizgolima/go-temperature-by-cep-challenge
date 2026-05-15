@@ -20,8 +20,11 @@ The system is designed following clean principles to ensure clear separation of 
 ---
 
 ## 🚀 Cloud Run URL
-The application is deployed and accessible at:
-**https://go-temperature-by-cep-challenge-790564571764.us-central1.run.app**
+A aplicação está implantada e acessível em:
+**URL Base:** `https://go-temperature-by-cep-challenge-790564571764.us-central1.run.app/{cep}`
+
+**Exemplo de teste (CEP de São Paulo):**
+[https://go-temperature-by-cep-challenge-790564571764.us-central1.run.app/01153000](https://go-temperature-by-cep-challenge-790564571764.us-central1.run.app/01153000)
 
 ---
 
