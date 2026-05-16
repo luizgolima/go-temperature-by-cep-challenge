@@ -9,7 +9,7 @@ import (
 
 type ViaCEPResponse struct {
 	Localidade string `json:"localidade"`
-	Erro       bool   `json:"erro"`
+	Erro       any    `json:"erro"`
 }
 
 func GetCityByZipCode(zipcode string) (string, error) {
@@ -28,8 +28,13 @@ func GetCityByZipCode(zipcode string) (string, error) {
 		return "", err
 	}
 
-	if data.Erro {
-		return "", errors.New("can not find zipcode")
+	if data.Erro != nil {
+		if b, ok := data.Erro.(bool); ok && b {
+			return "", errors.New("can not find zipcode")
+		}
+		if s, ok := data.Erro.(string); ok && s == "true" {
+			return "", errors.New("can not find zipcode")
+		}
 	}
 
 	return data.Localidade, nil
